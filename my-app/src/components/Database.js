@@ -26,16 +26,3 @@ export const getAllArticles = () => {
     return get(databaseRef);
 };
 
-/* Testing database fetching and print to console */
-
-/*
-useEffect(() => {
-    getArticlesByState('Florida').then((snapshot) => {
-        console.log(snapshot.val());
-    });
-
-    getAllArticles().then((snapshot) => {
-        console.log(snapshot.val());
-    });
-}, []);
-*/
