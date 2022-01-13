@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Map from "./Map"
 import Bar from "./RightBar/Bar"
 import StateSearchBar from "./StateSearchBar"
+
 import * as View from "./ViewState"
 
 import '../HomeScreen.css';
@@ -12,7 +13,7 @@ const HomeScreen = (props) =>{
 
     return(
         <div>
-            <StateSearchBar />
+            <StateSearchBar setViewState={setViewState}/>
             <div class="split right">
                 <Bar />
             </div>
