@@ -1,0 +1,66 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    padding: 20px;
+
+    background-color: var(--background);
+    font-family: "VarelaRound",Helvetica,Arial,sans-serif;
+    display: block;
+    overflow: hidden;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+    z-index: 1;
+    width: 66.6%;
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+    z-index: 2;
+    width: 33.4%;
+    box-shadow: -10px 5px 50px rgba(0, 0, 0, .25);
+    flex-flow: column;
+    display: flex;
+}
+
+.split.right .fit {
+    flex: 0 1 auto;
+}
+
+.split.right .flex {
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.split.right .bottom {
+    margin: 20px;
+}
+
+#news_body * {
+    margin: 10px;
+}
+
+:root {
+    --background: rgb(245, 250, 245);
+    --text-primary: black;
+    --text-secondary: royalblue;
+    --accent: purple;
+}
+
+[data-theme='dark'] {
+    --background: rgb(26, 40, 26);
+    --text-primary: white;
+    --text-secondary: grey;
+    --accent: darkred;
+}
+
+@font-face {
+    font-family: "VarelaRound";
+    src: url("./VarelaRound-Regular.ttf");
+}

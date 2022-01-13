@@ -1,0 +1,80 @@
+.searchInputs {
+    z-index: 2;
+    margin-top: 105px;
+    display: flex;
+}
+
+.search input {
+    z-index: 2;
+    background-color: white;
+    border: 0;
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 18px;
+    padding: 15px;
+    height: 30px;
+    width: 300px;
+}
+
+.searchIcon {
+    z-index: 2;
+    height: 60px;
+    width: 50px;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+input:focus {
+    z-index: 2;
+    outline: none;
+}
+
+.searchIcon svg {
+    z-index: 2;
+    font-size: 35px;
+}
+
+.dataResult {
+    z-index: 2;
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+    z-index: 2;
+    display: none;
+}
+
+.dataResult .dataItem {
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.dataItem p {
+    z-index: 2;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: lightgray;
+}
+
+#clearBtn {
+    z-index: 2;
+    cursor: pointer;
+}
