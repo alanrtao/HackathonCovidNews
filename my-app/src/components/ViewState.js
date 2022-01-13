@@ -19,6 +19,10 @@ export const WA_ViewState = {
     pitch: 0,
     bearing: 0
 } 
-// export const VA_ViewState = { 
-
-// }
+export const VA_ViewState = { 
+    longitude: -78.86134458163303,
+    latitude: 37.6762214939743,
+    zoom: 6.5,
+    pitch: 0,
+    bearing: 0
+}

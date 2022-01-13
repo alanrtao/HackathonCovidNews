@@ -8,9 +8,6 @@ import "../SearchBar.css";
 const StateSearchBar = (props) => {
     const [filteredData, setFilteredData] = useState([]);
 
-    // console.log("dadasdasdasdsadasd")
-    console.log(data)
-
     const placeholder="Look for ..."
 
     const handleFilter = (event) => {
@@ -26,10 +23,10 @@ const StateSearchBar = (props) => {
        }
     };
 
-    const handleOnClick = (abbr) =>{
+    const handleOnClick = (abbr,name) =>{
         const viewName = abbr + "_ViewState"
-        console.log(viewName)
         props.setViewState(View[viewName])
+        props.setName(name)
         // const 
     }
 
@@ -45,7 +42,7 @@ const StateSearchBar = (props) => {
                 {filteredData.slice(0, 15).map((value, key) => {
                     return (
                         // <div className="dataItem" href={value.link} target="_blank">
-                        <div className="dataItem" onClick={() => handleOnClick(value.abbreviation)}>
+                        <div className="dataItem" onClick={() => handleOnClick(value.abbreviation,value.name)}>
                             <p>{value.name}</p>
                         </div>
                     );

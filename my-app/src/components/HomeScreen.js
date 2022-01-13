@@ -10,12 +10,13 @@ import '../HomeScreen.css';
 
 const HomeScreen = (props) =>{
     const [viewState, setViewState] = useState(View.INITIAL_VIEW_STATE)
-
+    const [name, setName] = useState("")
+    
     return(
         <div>
-            <StateSearchBar setViewState={setViewState}/>
+            <StateSearchBar setViewState={setViewState} setName={setName}/>
             <div class="split right">
-                <Bar />
+                <Bar name={name}/>
             </div>
             <div class="split left">
                 <Map viewState={viewState}/>

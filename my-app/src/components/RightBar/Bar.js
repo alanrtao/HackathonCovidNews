@@ -7,17 +7,23 @@ const Bar = (props) =>{
     // articles is list of article objects with keys:
     // Title, Link, Date
     const [articles, setArticles] = useState([]);
-
+    console.log(props.name)
     // get articles by state, Washington is placeholder for now
     useEffect(() => {
-        getArticlesByState("Washington").then((snapshot) => {
-            const data = snapshot.val();
-            for (const article in data) {
-                setArticles([...articles, data[article]]);
-                articles.push(data[article]);
-            }
-        });
-    }, []);
+        if(props.name != ""){
+            // console.log("Washington")
+            console.log(props.name)
+            getArticlesByState(props.name).then((snapshot) => {
+                
+                const data = snapshot.val();
+                for (const article in data) {
+                    console.log(article)
+                    setArticles([...articles, data[article]]);
+                    articles.push(data[article]);
+                }
+            });
+        }
+    }, [props.name]);
 
     return(
         <div>
