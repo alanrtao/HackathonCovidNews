@@ -1,9 +1,12 @@
-import HomeScreen from "./components/HomeScreen";
+// import HomeScreen from "./components/HomeScreen";
+// import Map from "./components/Map";
+import Newsformat from "./components/Newsformat";
 
 function App() {
   return (
     <div className="App">
-      <HomeScreen />
+      {/* <Map /> */}
+      <Newsformat />
     </div>
   );
 }
