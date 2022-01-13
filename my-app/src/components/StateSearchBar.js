@@ -8,7 +8,7 @@ const StateSearchBar = (props) => {
 
     // console.log("dadasdasdasdsadasd")
     console.log(data)
-    
+
     const placeholder="Look for ..."
 
     const handleFilter = (event) => {
@@ -24,6 +24,9 @@ const StateSearchBar = (props) => {
        }
     };
 
+    const handleOnClick = (abbr) =>{
+
+    }
     return (
         <div className="search">
             <div className="searchInputs">
