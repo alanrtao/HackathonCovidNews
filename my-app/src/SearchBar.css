@@ -48,9 +48,8 @@ input:focus {
     border-radius: 3px 3px 20px 20px;
 
     color: var(--text-secondary);
-    
-    position:absolute;
-    width: fit-content;
+    position: absolute;
+    width: calc(100% - 95px);
 }
 
 .dataResult::-webkit-scrollbar {
