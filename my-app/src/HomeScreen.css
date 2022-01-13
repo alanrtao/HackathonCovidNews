@@ -7,6 +7,8 @@
     font-family: "VarelaRound",Helvetica,Arial,sans-serif;
     display: block;
     overflow: hidden;
+
+    color: var(--text-primary);
 }
 
 /* Control the left side */
@@ -25,7 +27,7 @@
     border-radius: 30px 0px 0px 30px;
     box-shadow: -10px 5px 50px rgba(0, 0, 0, .25);
     height: 100vh;
-
+    
     background-color: var(--background);
 }
 
@@ -35,6 +37,7 @@
     flex-flow: column;
     display: flex;
     margin: min(30px, 5%);
+    overflow-y: hidden;
 }
 
 .split.right .fit {
@@ -43,7 +46,7 @@
 
 .split.right .flex {
     flex: 1 1 auto;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .split.right .bottom {
@@ -52,6 +55,11 @@
 
 #news_body * {
     margin: 10px;
+}
+
+a {
+    color: var(--text-secondary);
+    text-decoration-style: none;
 }
 
 :root {

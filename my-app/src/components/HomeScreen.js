@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Map from "./Map"
 import Bar from "./RightBar/Bar"
-import StateSearchBar from "./StateSearchBar"
-
+import StateSearchBar from './StateSearchBar';
 import * as View from "./ViewState"
 
 import '../HomeScreen.css';
@@ -14,9 +13,9 @@ const HomeScreen = (props) =>{
     
     return(
         <div>
-            <StateSearchBar setViewState={setViewState} setName={setName}/>
+            {/* <StateSearchBar/> */}
             <div class="split right">
-                <Bar name={name}/>
+                <Bar name={name} setViewState={setViewState} setName={setName}/>
             </div>
             <div class="split left">
                 <Map viewState={viewState}/>

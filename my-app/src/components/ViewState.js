@@ -26,3 +26,17 @@ export const VA_ViewState = {
     pitch: 0,
     bearing: 0
 }
+export const FL_ViewState = { 
+    longitude: -83.95483057767663,
+    latitude: 27.741059427221664,
+    zoom: 6.5,
+    pitch: 0,
+    bearing: 0
+}
+export const WY_ViewState = { 
+    longitude: -107.51038371908568,
+    latitude: 43.07110565879845,
+    zoom: 6.5,
+    pitch: 0,
+    bearing: 0
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Newsformat from './Newsformat';
-import SearchBar from './SearchBar';
 import { getArticlesByState } from "../Database"
+import StateSearchBar from "../StateSearchBar"
 
 const Bar = (props) =>{
     // articles is list of article objects with keys:
@@ -11,15 +11,11 @@ const Bar = (props) =>{
     // get articles by state, Washington is placeholder for now
     useEffect(() => {
         if(props.name != ""){
-            // console.log("Washington")
-            console.log(props.name)
+            setArticles([])
             getArticlesByState(props.name).then((snapshot) => {
-                
                 const data = snapshot.val();
                 for (const article in data) {
-                    console.log(article)
-                    setArticles([...articles, data[article]]);
-                    articles.push(data[article]);
+                    setArticles((oldArray) => [...oldArray, data[article]]);
                 }
             });
         }
@@ -28,9 +24,9 @@ const Bar = (props) =>{
     return(
         <div>
             <h1 class = "fit"># Check</h1>
-                {/* <div class = "fit">
-                    <SearchBar />
-                </div> */}
+                <div class = "fit">
+                    <StateSearchBar setName={props.setName} setViewState={props.setViewState}/>
+                </div>
                 <div class = "flex bottom" id="news_body">
                     {articles.length > 0 && articles.map((article, i) =>
                         <Newsformat {...article} key={i} />

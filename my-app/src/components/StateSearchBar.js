@@ -27,6 +27,7 @@ const StateSearchBar = (props) => {
         const viewName = abbr + "_ViewState"
         props.setViewState(View[viewName])
         props.setName(name)
+        setFilteredData([])
         // const 
     }
 
@@ -34,10 +35,8 @@ const StateSearchBar = (props) => {
         <div className="search">
             <div className="searchInputs">
                 <input type="text" placeholder={placeholder} onChange={handleFilter} />
-                <div className="searchIcon">
-                </div>
             </div>
-            {filteredData.length != 0 && (
+            {filteredData.length !== 0 && (
             <div className="dataResult">
                 {filteredData.slice(0, 15).map((value, key) => {
                     return (
