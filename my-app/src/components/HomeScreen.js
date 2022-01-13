@@ -2,6 +2,8 @@
 import * as React from 'react';
 import Map from "./Map"
 import SearchBar from './SearchBar';
+import Newsformat from "./Newsformat";
+
 
 import './HomeScreen.css';
 
@@ -13,53 +15,8 @@ export default function HomeScreen() {
                 <div class = "fit">
                     <SearchBar />
                 </div>
-                <div class = "flex bottom">
-                    <ul id="news_body">
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                        <li>card 1</li>
-                    </ul>
+                <div class = "flex bottom" id="news_body">
+                    <Newsformat /> <Newsformat /> <Newsformat /> <Newsformat /> <Newsformat /> <Newsformat />
                 </div>
             </div>
             <div class="split left"><Map /></div>
