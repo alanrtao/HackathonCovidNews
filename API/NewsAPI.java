@@ -11,10 +11,10 @@ public class NewsAPI {
     static HttpClient client = HttpClient.newHttpClient();
 
     // create a request
-    static String apiKey = Secrets.getApiKey();
+    private static String apiKey = Secrets.getApiKey();
 
     static HttpRequest request = HttpRequest.newBuilder(
-                    URI.create("https://api.goperigon.com/v1/all?q=covid&language=en&location=state:FL&apiKey="+ apiKey))
+                    URI.create("https://api.goperigon.com/v1/all?q=covid&language=en&location=state:FL&addDateFrom=2021-12-01&apiKey="+ apiKey))
             .header("Accept", "*/*")
             .build();
 
