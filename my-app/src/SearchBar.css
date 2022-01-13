@@ -1,27 +1,28 @@
 .searchInputs {
     z-index: 2;
-    margin-top: 105px;
     display: flex;
+    width: 100%;
+
+    overflow: hidden;
 }
 
 .search input {
     z-index: 2;
     background-color: white;
     border: 0;
-    border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 8px;
     font-size: 18px;
     padding: 15px;
     height: 30px;
-    width: 300px;
+
+    width: 100%;
 }
 
 .searchIcon {
     z-index: 2;
     height: 60px;
     width: 50px;
-    background-color: white;
+    background-color: transparent;
     display: grid;
     place-items: center;
 }
@@ -37,14 +38,18 @@ input:focus {
 }
 
 .dataResult {
-    z-index: 2;
+    z-index: 5;
     margin-top: 5px;
-    width: 300px;
-    height: 200px;
+    height: max(33vh, 200px);
     background-color: white;
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     overflow: hidden;
     overflow-y: auto;
+    border-radius: 3px 3px 20px 20px;
+
+    color: var(--text-secondary);
+    position: absolute;
+    width: calc(100% - 95px);
 }
 
 .dataResult::-webkit-scrollbar {
@@ -77,4 +82,41 @@ a:hover {
 #clearBtn {
     z-index: 2;
     cursor: pointer;
+}
+
+
+:root {
+    --background: rgb(250, 250, 250);
+    --text-primary: var(--nine);
+    --text-secondary: var(--seven);
+    --accent: brown;
+
+    
+    --one: rgb(216, 243, 220);
+    --two: rgb(183, 228, 199);
+    --three: rgb(149, 213, 178);
+    --four: rgb(116, 198, 157);
+    --five: rgb(82, 183, 136);
+    --six: rgb(64, 145, 108);
+    --seven: rgb(45, 106, 79);
+    --eight: rgb(27, 67, 50);
+    --nine: rgb(8, 28, 21);
+}
+
+[data-theme='dark'] {
+    --background: var(--nine);
+    --text-primary: white;
+    --text-secondary: var(--one);
+    --accent: darkred;
+
+    
+    --one: rgb(216, 243, 220);
+    --two: rgb(183, 228, 199);
+    --three: rgb(149, 213, 178);
+    --four: rgb(116, 198, 157);
+    --five: rgb(82, 183, 136);
+    --six: rgb(64, 145, 108);
+    --seven: rgb(45, 106, 79);
+    --eight: rgb(27, 67, 50);
+    --nine: rgb(8, 28, 21);
 }

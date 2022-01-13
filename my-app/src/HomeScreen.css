@@ -7,6 +7,8 @@
     font-family: "VarelaRound",Helvetica,Arial,sans-serif;
     display: block;
     overflow: hidden;
+
+    color: var(--text-primary);
 }
 
 /* Control the left side */
@@ -31,10 +33,11 @@
 
 .split.right .content {
     width: calc(100% - 2 * min(30px, 5%));
-    height: 100%;
+    height: calc(100% - 2 * min(30px, 5%));
     flex-flow: column;
     display: flex;
     margin: min(30px, 5%);
+    overflow-y: auto;
 }
 
 .split.right .fit {
@@ -43,7 +46,6 @@
 
 .split.right .flex {
     flex: 1 1 auto;
-    overflow-y: auto;
 }
 
 .split.right .bottom {
@@ -52,6 +54,11 @@
 
 #news_body * {
     margin: 10px;
+}
+
+a {
+    color: var(--text-secondary);
+    text-decoration-style: none;
 }
 
 :root {
