@@ -1,12 +1,9 @@
 /* Split the screen in half */
 .split {
-    height: 100%;
+    height: 100vh;
     position: fixed;
     z-index: 1;
     top: 0;
-    padding: 20px;
-
-    background-color: var(--background);
     font-family: "VarelaRound",Helvetica,Arial,sans-serif;
     display: block;
     overflow: hidden;
@@ -16,17 +13,28 @@
 .left {
     left: 0;
     z-index: 1;
-    width: 66.6%;
+    width: calc(66.6vw);
 }
 
 /* Control the right side */
 .right {
     right: 0;
     z-index: 2;
-    width: 33.4%;
+    width: calc(33.4vw + 30px);
+    padding-left: 30px;
+    border-radius: 30px 0px 0px 30px;
     box-shadow: -10px 5px 50px rgba(0, 0, 0, .25);
+    height: 100vh;
+
+    background-color: var(--background);
+}
+
+.split.right .content {
+    width: calc(100% - 2 * min(30px, 5%));
+    height: 100%;
     flex-flow: column;
     display: flex;
+    margin: min(30px, 5%);
 }
 
 .split.right .fit {
