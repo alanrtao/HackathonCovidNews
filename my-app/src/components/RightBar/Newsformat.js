@@ -12,9 +12,9 @@ function Newsformat(props) {
             borderRadius: 5
           }}
         >
-            <h3>   Title: </h3>
-            <h3>   Date: </h3>
-            <h4>   Link: <a href="https://www.google.com/" target="_blank">Visit site</a> </h4>
+            <h3>   Title: {props.Title}</h3>
+            <h3>   Date: {props.Date}</h3>
+            <h4>   Link: <a href={props.Link} target="_blank">Visit site</a> </h4>
 
         </Box>
     );
