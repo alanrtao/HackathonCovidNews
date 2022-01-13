@@ -13,13 +13,13 @@ function Newsformat(props) {
             backgroundColor: '#FFFFE0',
             '&:hover': {
               backgroundColor: '#FFF8DC',
-              opacity: [0.7, 0.6, 0.5],
+              opacity: [0.3, 0.9, 0.2],
             },
           }}
         >
-            <h1>Title: </h1>
-            <h3>Date: </h3>
-            <h4>Link: </h4>
+            <h1>   Title: </h1>
+            <h3>   Date: </h3>
+            <h4>   Link: <a href="https://www.google.com/" target="_blank">Visit site</a> </h4>
 
         </Box>
     );
