@@ -1,14 +1,69 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import * as React from 'react';
+import Map from "./Map"
+import SearchBar from './SearchBar';
+
 import './HomeScreen.css';
 
-import Map from "./Map"
-
-const HomeScreen = (props) =>{
-    return(
+export default function HomeScreen() {
+    return (
         <div>
-            <div> Oakyd</div>
-            <Map />
-        </div> 
-    )
+            <div class="split right">
+                <h1 class = "fit"># Check</h1>
+                <div class = "fit">
+                    <SearchBar />
+                </div>
+                <div class = "flex bottom">
+                    <ul id="news_body">
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                        <li>card 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="split left"><Map /></div>
+        
+        </div>
+    );
 }
-export default HomeScreen;
