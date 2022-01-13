@@ -13,8 +13,7 @@ const Bar = (props) =>{
         getArticlesByState("Washington").then((snapshot) => {
             const data = snapshot.val();
             for (const article in data) {
-                setArticles([...articles, data[article]]);
-                articles.push(data[article]);
+                setArticles((oldArray) => [...oldArray, data[article]]);
             }
         });
     }, []);
