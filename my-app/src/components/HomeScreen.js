@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import Map from "./Map"
 import Bar from "./RightBar/Bar"
-import StateSearchBar from "./StateSearchBar"
 
 import * as View from "./ViewState"
 
@@ -13,9 +12,10 @@ const HomeScreen = (props) =>{
 
     return(
         <div>
-            <StateSearchBar setViewState={setViewState}/>
             <div class="split right">
-                <Bar />
+                <div class = "content">
+                    <Bar setViewState={setViewState}/>
+                </div>
             </div>
             <div class="split left">
                 <Map viewState={viewState}/>

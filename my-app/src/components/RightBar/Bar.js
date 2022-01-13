@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Newsformat from './Newsformat';
-import SearchBar from './SearchBar';
 import { getArticlesByState } from "../Database"
+import StateSearchBar from "../StateSearchBar"
 
 const Bar = (props) =>{
     // articles is list of article objects with keys:
@@ -21,9 +21,9 @@ const Bar = (props) =>{
     return(
         <div>
             <h1 class = "fit"># Check</h1>
-                {/* <div class = "fit">
-                    <SearchBar />
-                </div> */}
+                <div class = "fit">
+                    <StateSearchBar setViewState={props.setViewState}/>
+                </div>
                 <div class = "flex bottom" id="news_body">
                     {articles.length > 0 && articles.map((article, i) =>
                         <Newsformat {...article} key={i} />
