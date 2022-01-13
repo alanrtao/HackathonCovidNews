@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import './HomeScreen.css';
 
 function Newsformat(props) {
     return (
@@ -8,13 +9,7 @@ function Newsformat(props) {
             width: 300,
             height: 200,
             border: 1,
-            borderRadius: 5,
-            borderColor: 'grey.500',
-            backgroundColor: '#FFFFE0',
-            '&:hover': {
-              backgroundColor: '#FFF8DC',
-              opacity: [0.3, 0.9, 0.2],
-            },
+            borderRadius: 5
           }}
         >
             <h1>   Title: </h1>

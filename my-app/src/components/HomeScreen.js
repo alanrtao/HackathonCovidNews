@@ -11,7 +11,7 @@ export default function HomeScreen() {
     return (
         <div>
             <div class="split right">
-                <h1 class = "fit"># Check</h1>
+                <h1 class = "fit">Covid News</h1>
                 <div class = "fit">
                     <SearchBar />
                 </div>
