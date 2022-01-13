@@ -31,7 +31,6 @@ public class NewsAPI {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.print(response.body());
         return response;
     }
 }
