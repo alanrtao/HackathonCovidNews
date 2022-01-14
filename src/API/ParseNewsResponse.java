@@ -1,3 +1,5 @@
+package API;
+
 import java.sql.Array;
 
 public class ParseNewsResponse {

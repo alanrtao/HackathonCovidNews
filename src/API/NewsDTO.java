@@ -1,3 +1,5 @@
+package API;
+
 public class NewsDTO {
     private String title;
     private String date;
